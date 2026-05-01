@@ -12,10 +12,10 @@ cd app && autopep8 --in-place --aggressive --aggressive *.py
 
 ### Build the Docker image
 ```bash
-docker build -t tydom2mqtt .
+docker build -t tydom2mqtt_Garage .
 ```
 
 ### Run the Docker image
 ```bash
-docker run -it --rm -e TYDOM_MAC="001A25123456" -e TYDOM_PASSWORD="secret" tydom2mqtt
+docker run -it --rm -e TYDOM_MAC="001A25123456" -e TYDOM_PASSWORD="secret" tydom2mqtt_Garage
 ```

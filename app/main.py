@@ -17,7 +17,7 @@ logging.basicConfig(level="INFO", format="%(asctime)s - %(message)s")
 # Init logger
 logger = logging.getLogger(__name__)
 
-logger.info("Starting tydom2mqtt")
+logger.info("Starting tydom2mqtt_Garage")
 
 # Load configuration from env vars (+ fallback to default values)
 configuration = Configuration.load()
