@@ -11,7 +11,7 @@ arch:
   - aarch64
   - amd64
   - i386
-url: https://github.com/Taz-13340/test.git
+url: https://github.com/Taz-13340/Tydom_MQTT_GARAGE.git
 services:
   - mqtt:need
 
