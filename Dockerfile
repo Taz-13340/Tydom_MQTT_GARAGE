@@ -1,6 +1,6 @@
 FROM python:3.12-alpine
 
-LABEL org.opencontainers.image.description="Deltadore Tydom to MQTT Bridge"
+LABEL org.opencontainers.image.description="Deltadore Tydom to MQTT Bridge Garage"
 
 # Add required packages
 RUN apk add --no-cache gcc musl-dev linux-headers
