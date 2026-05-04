@@ -1,0 +1,36 @@
+version: "3.9"
+
+services:
+
+  mqtt:
+    image: eclipse-mosquitto:2
+    container_name: mqtt
+    restart: unless-stopped
+    ports:
+      - "1883:1883"
+    volumes:
+      - ./mosquitto:/mosquitto
+
+  tydom2mqtt_garage:
+    build: https://github.com/Taz-13340/Tydom_MQTT.git
+    container_name: tydom_garage
+    restart: unless-stopped
+    network_mode: host
+    environment:
+      - TYDOM_IP=192.168.1.50
+      - TYDOM_PASSWORD=password1
+      - MQTT_HOST=127.0.0.1
+      - MQTT_PORT=1883
+      - MQTT_PREFIX=garage
+
+  tydom2mqtt_maison:
+    build: https://github.com/Taz-13340/Tydom_MQTT.git
+    container_name: tydom_maison
+    restart: unless-stopped
+    network_mode: host
+    environment:
+      - TYDOM_IP=192.168.1.51
+      - TYDOM_PASSWORD=password2
+      - MQTT_HOST=127.0.0.1
+      - MQTT_PORT=1883
+      - MQTT_PREFIX=maison
